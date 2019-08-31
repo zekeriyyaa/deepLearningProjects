@@ -1,0 +1,26 @@
+<annotation>
+	<folder>detection</folder>
+	<filename>18.jpg</filename>
+	<path>C:\Users\Zekeriyya\Desktop\detection\18.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>431</width>
+		<height>431</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>eraser</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>135</ymin>
+			<xmax>429</xmax>
+			<ymax>291</ymax>
+		</bndbox>
+	</object>
+</annotation>

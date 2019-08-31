@@ -1,0 +1,26 @@
+<annotation>
+	<folder>detection</folder>
+	<filename>27.jpg</filename>
+	<path>C:\Users\Zekeriyya\Desktop\detection\27.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>eraser</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>69</xmin>
+			<ymin>29</ymin>
+			<xmax>602</xmax>
+			<ymax>414</ymax>
+		</bndbox>
+	</object>
+</annotation>
