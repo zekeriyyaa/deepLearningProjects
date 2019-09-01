@@ -1,7 +1,7 @@
 # Deep Learning
 There are some project that I made below in the files. Each files represent different algorithm and models of Deep Learning. You can see their subject explanation below: 
 1. faster_rcnn-object_detection
-<br>There are many step to create own train dataset to object detection. 
+<br>In this project, we try to detect eraser from custom image and show it in square. There are many step to create own train dataset to object detection. 
      #### Original text version of tutorial you can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/).
      - Collect images that contain your object - The bare ideally more like 1000 or more, but the more images you have, the more tedious step 2 will be. 
      - Labeling each images with Label Image app
