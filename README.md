@@ -9,6 +9,8 @@ There are many project about Deep Learning with using different algorithms and m
      - Train our model.
      - Export inference graph from new trained model.
      - Detect custom objects in real time.
+     <br><br>** https://www.youtube.com/watch?v=bYqvx_DM45U ** 
+     <br>look this url for how generate above steps.
 2. resnet-object_detection-colab
    - asd
 3. tensorflow-pill_detection-colab
