@@ -1,10 +1,10 @@
 # Deep Learning
 There are many project about Deep Learning with using different algorithms and models.
 1. faster_rcnn-object_detection
- - adad
+   - adad
 2. resnet-object_detection-colab
- - asd
+   - asd
 3. tensorflow-pill_detection-colab
- - asdas
+   - asdas
 4. yolo-video-object_detection
- - asdad
+   - asdad
