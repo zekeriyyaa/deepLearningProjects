@@ -23,6 +23,10 @@
      - Fix your **DetectionFromImage** file with your path.
      - Specify your test object and path that image saved.
 3. tensorflow-pill_detection-colab
-   - asdas
+
 4. yolo-video-object_detection
-   - asdad
+<br>Here, we try to detect custom object from given image with using [YOLO](https://www.kaggle.com/rmoharir8396/yolo-h5-file#yolo.h5) dataset on [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true). To can do this we use **FirstVideoDetection.ipynb** file. There are some case to do for can execute it that explain below:
+     - Connect drive with colab. You can look this [url](https://medium.com/deep-learning-turkiye/google-colab-ile-ücretsiz-gpu-kullanımı-30fdb7dd822e) for how to connect them each other. 
+     - Install some required library and file on your colab. 
+     - Fix your **FirstVideoDetection** file with your path.
+     - Specify your test object and path that image saved.
