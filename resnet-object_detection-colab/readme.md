@@ -1,7 +1,6 @@
-dowload resnet dataset
-
 # Resnet-Object Detection with Google Colab
   <br>Here, we try to detect custom object from given image with using [faster_rcnn_resnet101_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) dataset on [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true). We use **DetectionFromImage.ipynb** file for this. There are some case to do like explained below:
+  - Firstly, you should download here [faster_rcnn_resnet101_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) dataset from given url. 
   - Connect drive with colab. You can look this [url](https://medium.com/deep-learning-turkiye/google-colab-ile-ücretsiz-gpu-kullanımı-30fdb7dd822e) for how to connect them each other. Or follow given code:
   ```
 !apt-get install -y -qq software-properties-common python-software-properties module-init-tools
