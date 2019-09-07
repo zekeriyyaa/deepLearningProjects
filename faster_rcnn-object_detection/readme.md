@@ -11,7 +11,16 @@
 4. Generate TF Records from these splits.
    - You have to fix your `xml_to_csv.py` file and change directory which is include your images.
    - Execute `xml_to_csv.py` file on command prompt for convert .xml files to .csv file. It creates train_labels.csv and test_labels.csv file into your eraserImg folder. 
-   - Execute `generate_tfrecord.py` file on command prompt and generate record file into your eraserImg folder. You have to give directories as argument when run generate_tfrecord.py file. You look in generate_tfrecord.py file for how can you give arguments.
+   - You will replace the following code in **generate_tfrecord.py**
+   ```
+   # TO-DO replace this with label map
+   def class_text_to_int(row_label):
+    if row_label == 'eraser':
+        return 1
+    else:
+        None
+    ```
+   - Execute `generate_tfrecord.py` file on command prompt and generate record file into your eraserImg folder. You have to give directories as argument when execute generate_tfrecord.py file. You can look in generate_tfrecord.py file for how can you give arguments.
    ``` 
    Usage:
     Create train data:
@@ -19,7 +28,7 @@
     Create test data:
       python generate_tfrecord.py --csv_input=CSGO_images\test_labels.csv --image_dir=CSGO_images\test --output_path=CSGO_images\test.record
    ```
-5. Setup a .config file for the model of choice (you could train your own from scratch, but we'll be using transfer learning).
+5. Create **labelmap.pbtxt** file and configure it.
    - Use a text editor to create new file and save it as `labelmap.pbtxt` in the eraserTraining folder. (Make sure the file type is .pbtxt)
    - Replace it with given format that include id and name of item.
    ```
@@ -28,10 +37,24 @@
    name: 'eraser'
    }
    ```
+6. Setup a .config file for the model of choice (you could train your own from scratch, but we'll be using transfer learning).
+   - Copy the **faster_rcnn_inception_v2_coco.config** file into eraserTrainig folder. We need the several changes in this config file, mainly changing the number of classes, examples and adding the file paths to the training data.
+     > Line 10. Change num_classes to the number of different objects you want the classifier to detect. For my CSGO object detection it would be:
+num_classes : 4
+     > Line 107. Change fine_tune_checkpoint to:
+fine_tune_checkpoint : "faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
+     > Lines 122 and 124. In the train_input_reader section, change input_path and label_map_path to:
+input_path: "CSGO_images/train.record"
+label_map_path: "CSGO_training/labelmap.pbtxt"
+     > Line 128. Change num_examples to the number of images you have in the CSGO_images\test directory. I have 113 images, so I change it to:
+num_examples: 113
+     > Lines 136 and 138. In the eval_input_reader section, change input_path and label_map_path to:
+input_path: "CSGO_images/test.record"
+label_map_path: "CSGO_training/labelmap.pbtxt"
    
-6. Train our model.
-7. Export inference graph from new trained model.
-8. Detect custom objects.
+7. Train our model.
+8. Export inference graph from new trained model.
+9. Detect custom objects.
      <br>** https://www.youtube.com/watch?v=bYqvx_DM45U ** 
      <br>** https://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/ **
      <br>Look this urls for how generate above steps.
