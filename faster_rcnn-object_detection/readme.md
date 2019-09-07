@@ -9,8 +9,8 @@
    - Start to label all images one by one. So, LabelImg created .xml files in your image's directory.
 3. Split this data into train/test samples. Training data should be around 80% and testing around 20%.
 4. Generate TF Records from these splits.
-   - You have to fix your xml_to_csv file and change directory which is include your images.
-   - Use `xml_to_csv.py` file on command prompt for convert .xml files to .csv file. It creates train_labels.csv and test_labels.csv file into your eraserImg folder. 
+   - You have to fix your `xml_to_csv.py` file and change directory which is include your images.
+   - Execute `xml_to_csv.py` file on command prompt for convert .xml files to .csv file. It creates train_labels.csv and test_labels.csv file into your eraserImg folder. 
    - Use `generate_tfrecord.py` and generate record file into your eraserImg folder. You have to give directories as argument when run generate_tfrecord.py file. You look in generate_tfrecord.py file for how can you give arguments.
    ``` 
    Usage:
