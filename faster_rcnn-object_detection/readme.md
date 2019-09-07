@@ -39,20 +39,25 @@
    ```
 6. Setup a .config file for the model of choice (you could train your own from scratch, but we'll be using transfer learning).
    - Copy the **faster_rcnn_inception_v2_coco.config** file into eraserTrainig folder. We need the several changes in this config file, mainly changing the number of classes, examples and adding the file paths to the training data.
-     > Line 10. Change num_classes to the number of different objects you want the classifier to detect. For my CSGO object detection it would be:
-num_classes : 4
-     > Line 107. Change fine_tune_checkpoint to:
-fine_tune_checkpoint : "faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
-     > Lines 122 and 124. In the train_input_reader section, change input_path and label_map_path to:
-input_path: "CSGO_images/train.record"
-label_map_path: "CSGO_training/labelmap.pbtxt"
-     > Line 128. Change num_examples to the number of images you have in the CSGO_images\test directory. I have 113 images, so I change it to:
-num_examples: 113
-     > Lines 136 and 138. In the eval_input_reader section, change input_path and label_map_path to:
-input_path: "CSGO_images/test.record"
-label_map_path: "CSGO_training/labelmap.pbtxt"
+     - Line 10. Change num_classes to the number of different objects you want the classifier to detect. For my CSGO object detection it would be:
+       num_classes : 4
+     - Line 107. Change fine_tune_checkpoint to:
+       fine_tune_checkpoint : "faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
+     - Lines 122 and 124. In the train_input_reader section, change input_path and label_map_path to:
+       input_path: "eraserImg/train.record"
+       label_map_path: "eraserTrainig/labelmap.pbtxt"
+     - Line 128. Change num_examples to the number of images you have in the eraserImg\test directory. I have 4 images,          so I change it to:
+       num_examples: 4
+     - Lines 136 and 138. In the eval_input_reader section, change input_path and label_map_path to:
+       input_path: "eraserImg/test.record"
+       label_map_path: "eraserTraining/labelmap.pbtxt"
    
 7. Train our model.
+   - Execute given command on command prompt.
+   ```
+   python train.py --logtostderr --train_dir=eraserTraining/ --    pipeline_config_path=eraserTraining/faster_rcnn_inception_v2_coco.config
+
+   ```
 8. Export inference graph from new trained model.
 9. Detect custom objects.
      <br>** https://www.youtube.com/watch?v=bYqvx_DM45U ** 
