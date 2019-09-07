@@ -1,8 +1,8 @@
 ## Faster_Rcnn-Object_Detection
 <br>In this project, we try to detect eraser from given image and show it in square with using [faster_rcnn_inception_v2_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) dataset. There are many step to create own train dataset to object detection.
-Original text version of tutorial you can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/).
-     - Collect images that contain your object - The bare ideally more like 1000 or more, but the more images you have, the more tedious step 2 will be. 
-     - Labeling each images with Label Image app
+<br>Original text version of tutorial you can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/).<br>
+1. Collect images that contain your object - The bare ideally more like 1000 or more, but the more images you have, the more tedious step 2 will be. 
+2. Labeling each images with Label Image app
      <br>[LabelImg GitHub link](https://github.com/tzutalin/labelImg) 
      <br>[LabelImg download link](https://www.dropbox.com/s/tq7zfrcwl44vxan/windows_v1.6.0.zip?dl=1)
      - Split this data into train/test samples. Training data should be around 80% and testing around 20%.
