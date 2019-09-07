@@ -38,7 +38,7 @@ sys.path.insert(0, 'drive')
 ``` 
 !pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.2/imageai-2.0.2-py3-none-any.whl
 ```
-  - Fix your **DetectionFromImage** file with your path. Specify your test object and path that image saved.
+  - Fix your **FirstVideoDetection.ipynb** file with your path. Specify your test object and path that image saved.
 ```
 from imageai.Detection import VideoObjectDetection
 
