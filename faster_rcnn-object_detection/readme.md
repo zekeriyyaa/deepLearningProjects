@@ -1,6 +1,6 @@
 ## Faster_Rcnn-Object_Detection
 <br>In this project, we try to detect eraser from given image and show it in square with using [faster_rcnn_inception_v2_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) dataset. There are many step to create own train dataset to object detection.
-**<br>Original text version of tutorial you can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/).**<br>
+**<br>You can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/) for original text version of tutorial.**<br>
 1. Collect images that contain your object the bare ideally more like 1000 or more, but the more images you have, the more tedious step 2 will be. In this project, we will use 15 images for training and 4 images for test. Actually, we should use more images but here, we just try execute these process to show result correctly.
 2. Labeling each images with Label Image app.
    - Dowload and install LabelImg that given addresses.
@@ -20,6 +20,15 @@
       python generate_tfrecord.py --csv_input=CSGO_images\test_labels.csv --image_dir=CSGO_images\test --output_path=CSGO_images\test.record
    ```
 5. Setup a .config file for the model of choice (you could train your own from scratch, but we'll be using transfer learning).
+   - Use a text editor to create new file and save it as `labelmap.pbtxt` in the eraserTraining folder. (Make sure the file type is .pbtxt)
+   - Replace it with given format that include id and name of item.
+   ```
+   item {
+   id: 1
+   name: 'eraser'
+   }
+   ```
+   
 6. Train our model.
 7. Export inference graph from new trained model.
 8. Detect custom objects.
