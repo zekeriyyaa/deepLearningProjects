@@ -1,5 +1,5 @@
 # Deep Learning
-### There are some project that I made below in the files. Each files represent different algorithm and models of Deep Learning. You can see their subject explanation below: 
+### There are some project below. Each files represent different algorithm and models of Deep Learning. You can see their subject explanation below: 
 1. [Faster_Rcnn-Object_Detection](faster_rcnn-object_detection)
 <br>In this project, we try to detect eraser from given image and show it in square with using [faster_rcnn_inception_v2_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) dataset. There are many step to create own train dataset to object detection. 
      #### Original text version of tutorial you can visit [here](http://pylessons.com/Tensorflow-object-detection-step-by-step-custom-object-detection/).
